@@ -1,0 +1,41 @@
+<%= content_for :breadcrumb_heading do %>
+  Dashboard    
+<%end%>
+
+<!-- Info boxes -->
+<%= render "layouts/custom/menus/info_box"%>
+<%= render "layouts/custom/menus/wedgets1"%>
+<!-- Main row -->
+<div class="row">
+  <!-- Left col -->
+  <div class="col-md-8">
+    <% render "layouts/custom/menus/map_wedgit"%>
+    <div class="row">
+      <div class="col-md-6">
+        <% render "layouts/custom/menus/direct_chat"%>
+      </div>
+      <!-- /.col -->
+
+      <div class="col-md-6">
+        <% render "layouts/custom/menus/latest_users"%>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <% render "layouts/custom/menus/latest_orders"%>
+  </div>
+  <!-- /.col -->
+
+  <div class="col-md-4">
+    <% render "layouts/custom/menus/info_box2"%>
+    <% render "layouts/custom/menus/usages"%>
+    
+
+    <!-- PRODUCT LIST -->
+    <%  render "layouts/custom/menus/latest_products"%>
+  </div>
+  <!-- /.col -->
+</div>
+<!-- /.row -->
+      
