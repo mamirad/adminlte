@@ -1,0 +1,14 @@
+<% unless flash.empty? %>
+      <script type="text/javascript">
+          <% flash.each do |f| %>
+            <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+            <%if f[1].class.to_s == 'Array'%>
+              <%f[1].each do |msg| %>
+                toastr['<%= type %>']('<%= msg %>');
+              <%end %>
+            <%else %>
+              toastr['<%= type %>']('<%= f[1] %>');
+            <%end %>
+          <% end %>
+      </script>
+    <% end %>
